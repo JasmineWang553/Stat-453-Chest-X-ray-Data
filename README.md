@@ -10,7 +10,7 @@
 
 - create_combinedata.py:
 
-1. use this to combine data from two datasets
+1. use this to combine data from two datasets https://www.kaggle.com/praveengovi/coronahack-chest-xraydataset & https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
 2. make sure folder is in this structure
 
 ```
