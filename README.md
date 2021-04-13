@@ -24,6 +24,8 @@ finalProjectfolder
 +-- Coronahack-Chest-XRay-Dataset
 |   +-- test
 |   +-- train
-+-- Chest_xray_Corona_Metadata
-+-- Chest_xray_Corona_dataset_Summary
+|   +-- Chest_xray_Corona_dataset_Summary
+|   +-- Chest_xray_Corona_Metadata
+
+
 ```
