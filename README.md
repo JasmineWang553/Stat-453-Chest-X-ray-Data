@@ -8,8 +8,7 @@
 
 - helper functions (3): they are written by professor
 
-- ```create_combinedata.py```:
-Function: use this to combine data from two datasets [CoronaHack](https://www.kaggle.com/praveengovi/coronahack-chest-xraydataset), [Radiology Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
+- ```create_combinedata.py```: use this to combine data from two datasets [CoronaHack](https://www.kaggle.com/praveengovi/coronahack-chest-xraydataset), [Radiology Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
 
 How to use:
   1. download from 2 websites above and extract them
