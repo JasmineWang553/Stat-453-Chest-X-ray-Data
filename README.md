@@ -25,4 +25,4 @@
 |   +-- train
 +-- Chest_xray_Corona_Metadata
 +-- Chest_xray_Corona_dataset_Summary
-....
+
