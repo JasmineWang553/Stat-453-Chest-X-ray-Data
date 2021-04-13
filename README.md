@@ -14,7 +14,7 @@
 2. make sure folder is in this structure
 
 ```
-finalProject
+finalProjectfolder
 +-- create_combinedata.py
 +-- COVID-19_Radiography_Dataset
 |   +-- COVID
