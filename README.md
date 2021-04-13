@@ -11,8 +11,8 @@
 - ```create_combinedata.py```:
 
   Function: use this to combine data from two datasets 
-      - https://www.kaggle.com/praveengovi/coronahack-chest-xraydataset
-      - https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
+    - https://www.kaggle.com/praveengovi/coronahack-chest-xraydataset
+    - https://www.kaggle.com/tawsifurrahman/covid19-radiography-database
   1. download from 2 websites above and extract them
   2. make sure folder is structure below (NOT in compressed form)!!!
   3. after running ```create_combinedata.py``` in terminal or other ways you will have ```Combined_data``` folder with 4 folders inside COVID, Lung_Opacity, Normal, Viral Pneumonia
