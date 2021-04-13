@@ -13,7 +13,8 @@
 1. use this to combine data from two datasets
 2. make sure folder is in this structure
 
-.
+```
+finalProject
 +-- create_combinedata.py
 +-- COVID-19_Radiography_Dataset
 |   +-- COVID
@@ -25,4 +26,4 @@
 |   +-- train
 +-- Chest_xray_Corona_Metadata
 +-- Chest_xray_Corona_dataset_Summary
-
+```
