@@ -86,7 +86,7 @@ class ModelOutputs():
 
 def preprocess_image(img):
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                     std=[0.229, 0.224, 0.225])
+                                     std=[0.229, 0.224, 0.2255])
     preprocessing = transforms.Compose([
         transforms.ToTensor(),
         normalize,
@@ -166,7 +166,7 @@ def deprocess_image(img):
     return np.uint8(img*255)
 
 
-def store_gradcam_image(model, model_name, label, i):
+def store_gradcam_image(model, target_layer_names, model_name, label, i):
     if not os.path.exists('gradcam_images'):
         os.makedirs('gradcam_images')
         
@@ -181,7 +181,7 @@ def store_gradcam_image(model, model_name, label, i):
     input_img = preprocess_image(img)
 
     grad_cam = GradCam(model=model, feature_module=model.features,
-                       target_layer_names=["6"], use_cuda=torch.cuda.is_available())
+                       target_layer_names= target_layer_names, use_cuda=torch.cuda.is_available())
 
     # If None, returns the map for the highest scoring category.
     # Otherwise, targets the requested category.

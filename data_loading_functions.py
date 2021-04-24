@@ -45,10 +45,10 @@ def train_val_dataset(dataset):
 
 
 def split_train_test_loaders(dataset_path='.\\COVID-19_Radiography_Dataset', batch_size=64):
-    np.random.seed(7)
-
-    mean = [0.4363, 0.4328, 0.3291]
-    std = [0.2129, 0.2075, 0.2038]
+    np.random.seed(1)
+ 
+    mean = (0.485, 0.456, 0.406)
+    std = (0.229, 0.224, 0.2255)
 
     train_transforms = transforms.Compose([
         transforms.Resize((224, 224)),
