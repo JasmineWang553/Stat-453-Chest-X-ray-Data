@@ -83,7 +83,7 @@ def show_examples(model, data_loader, unnormalizer=None, class_dict=None):
             predictions = torch.argmax(logits, dim=1)
         break
 
-    fig, axes = plt.subplots(nrows=3, ncols=5,
+    fig, axes = plt.subplots(nrows=3, ncols=5, figsize = (5,5),#####
                              sharex=True, sharey=True)
     
     if unnormalizer is not None:
