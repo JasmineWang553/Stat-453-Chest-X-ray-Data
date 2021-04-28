@@ -12,7 +12,7 @@
 
 ## Results
 (1) Train, Test Accuracy
-| Model Name \ Evaluation | Train Acc | Test Acc |
+| Model Name \ Evaluation | Train Accuracy | Test Accuracy |
 | :-----: |:--------:| :-----:| 
 | AlexNet |  97.87 % |  93.86 %  |
 | VGG19 with batch norm | 98.12 % | 94.33 % | 
