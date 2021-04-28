@@ -6,7 +6,15 @@
 - **Tech used**: Pytorch, pandas, numpy, opencv, matplotlib<br>
 
 ## Results
-(1) Train, Test Accuracy
+(1) 
+Grad-CAM visualization on CNN models
+
+|            Model             |                    ```Original COVID```                    |                     ```AlexNet```                     |                     ```VGG19_bn```                     |        ```ResNet50```   |           
+| :--------------------------: | :---------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: | :---------------------------------------------------: |
+|            Layer             |                     ```None```                      |                   ```Layer 12```                    |                     ```Layer 51```                     |   ```Layer 4.2```                      |
+| Grad-CAM | ![](gradcam_images/COVID-121.png) | ![](gradcam_images/cam_COVID-121_Alexnet_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_VGG19_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_ResNet50_oldnorm.jpg) |
+
+(2) Train, Test Accuracy
 | Model Name \ Evaluation | Train Accuracy | Test Accuracy |
 | :-----: |:--------:| :-----:| 
 | AlexNet |  97.87 % |  93.86 %  |
@@ -14,21 +22,13 @@
 | **ResNet 50** |  **98.59 %** |  **95.46 %** | 
 | Logistic Regression | 60.84 %  | 62.24 % |
 
-(2) Multi-class: Precision, Recall, F1 score
+(3) Multi-class: Precision, Recall, F1 score
 | Class label \ Model Name | Logistic Regression | AlexNet | VGG19 with batch norm | Resnet50 | 
 | :-----: |:--------:| :-----:| :-----:|:-----:|
 | COVID | 25.86 / 28.75 / 27.23  | 96.55 / 94.65 / 95.59  | 97.7 / 94.44 / 96.05 | 98.28 / 97.71 / 97.99 | 
 | Lung Opacity | 53.85 / 70.59/ 61.09 | 88.78 / 94.22 / 91.42 | 90.38 / 94.31 / 92.31 | 90.71 / 96.42 / 93.48 | 
 | Normal | 88.04 / 67.14 / 76.19  | 95.65 / 93.17 / 94.39  | 95.36 / 93.96 /94.65 | 97.43 / 93.99 / 95.68 | 
 | Viral Pneumonia | 0.0 / NA / NA  | 96.97 / 95.52 / 96.24  | 96.21 / 96.95 / 96.58 | 95.45 / 96.92 / 96.18 | 
-
-(3) 
-Grad-CAM visualization on CNN models
-
-|            Model             |                    ```Original COVID```                    |                     ```AlexNet```                     |                     ```VGG19_bn```                     |        ```ResNet50```   |           
-| :--------------------------: | :---------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: | :---------------------------------------------------: |
-|            Layer             |                     ```None```                      |                   ```Layer 12```                    |                     ```Layer 51```                     |   ```Layer 4.2```                      |
-| Grad-CAM | ![](gradcam_images/COVID-121.png) | ![](gradcam_images/cam_COVID-121_Alexnet_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_VGG19_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_ResNet50_oldnorm.jpg) |
 
 
 ## Dataset
