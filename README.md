@@ -5,11 +5,6 @@
 - **Goal**: Train models on detecting Covid-19, Viral Pneumonia, heathy lungs and Lung Opacity from X-ray images using transfer learning on Convolutional Neural Networks (CNN): DenseNet, ResNet, AlexNet, and a benchmark model with Logistic Regression. Find the best model with lowest misclassification rate for certainly contagious disease COVID and Viral Pneumonia, and highest test set accuracy.
 - **Tech used**: Pytorch, pandas, numpy, opencv, matplotlib<br>
 
-## Dataset
-- [link to dataset](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
-- M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, M. T. Islam, “Can AI help in screening Viral and COVID-19 pneumonia?” IEEE Access, Vol. 8, 2020, pp. 132665 - 132676. [Paper link](https://ieeexplore.ieee.org/document/9144185)
-- Rahman, T., Khandakar, A., Qiblawey, Y., Tahir, A., Kiranyaz, S., Kashem, S.B.A., Islam, M.T., Maadeed, S.A., Zughaier, S.M., Khan, M.S. and Chowdhury, M.E., 2020. Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images. [Paper Link](https://www.sciencedirect.com/science/article/pii/S001048252100113X?via%3Dihub)
-
 ## Results
 (1) Train, Test Accuracy
 | Model Name \ Evaluation | Train Accuracy | Test Accuracy |
@@ -34,6 +29,12 @@ Grad-CAM visualization on CNN models
 | :--------------------------: | :---------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: | :---------------------------------------------------: |
 |            Layer             |                     ```None```                      |                   ```Layer 12```                    |                     ```Layer 51```                     |   ```Layer 4.2```                      |
 | Grad-CAM | ![](gradcam_images/COVID-121.png) | ![](gradcam_images/cam_COVID-121_Alexnet_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_VGG19_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_ResNet50_oldnorm.jpg) |
+
+
+## Dataset
+- [link to dataset](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
+- M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, M. T. Islam, “Can AI help in screening Viral and COVID-19 pneumonia?” IEEE Access, Vol. 8, 2020, pp. 132665 - 132676. [Paper link](https://ieeexplore.ieee.org/document/9144185)
+- Rahman, T., Khandakar, A., Qiblawey, Y., Tahir, A., Kiranyaz, S., Kashem, S.B.A., Islam, M.T., Maadeed, S.A., Zughaier, S.M., Khan, M.S. and Chowdhury, M.E., 2020. Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images. [Paper Link](https://www.sciencedirect.com/science/article/pii/S001048252100113X?via%3Dihub)
 
 ## Files
 - jupyter notebooks:
