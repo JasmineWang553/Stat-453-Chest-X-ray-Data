@@ -1,34 +1,21 @@
 # Stat-453-Chest-X-ray-Data
 
+### COVID and Lung Disease Detection from Xray images
+- **Intro**: Failure to detect lung disorders or have delayed diagnosis brings devastating results for the patient. Due to the quick spread of COVID-19, many patients were unable to access required treatments in time. Therefore, in order to address these issues, we are motivated to develop deep learning models that can quickly and accurately classify lung diseases and address them with the corresponding treatments in a timely matter.
+- **Goal**: Train models on detecting Covid-19, Viral Pneumonia, heathy lungs and Lung Opacity from X-ray images using transfer learning on Convolutional Neural Networks (CNN): DenseNet, ResNet, AlexNet, and a benchmark model with Logistic Regression.
+- **Tech used**: Pytorch, pandas, numpy, opencv<br>
 
-## Structure
-- jupyter notebooks (currently 2):
-  1. Logistic Regression (1 model -- from scratch)
-  2. AlexNet (2 models -- from scratch & import pretrained)
+## Dataset
+- [link to dataset](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
+- M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, M. T. Islam, “Can AI help in screening Viral and COVID-19 pneumonia?” IEEE Access, Vol. 8, 2020, pp. 132665 - 132676. [Paper link](https://ieeexplore.ieee.org/document/9144185)
+- Rahman, T., Khandakar, A., Qiblawey, Y., Tahir, A., Kiranyaz, S., Kashem, S.B.A., Islam, M.T., Maadeed, S.A., Zughaier, S.M., Khan, M.S. and Chowdhury, M.E., 2020. Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images. [Paper Link](https://www.sciencedirect.com/science/article/pii/S001048252100113X?via%3Dihub)
 
-- helper functions (3): they are written by professor
+## Files
+- jupyter notebooks:
+  1. Logistic Regression 
+  2. AlexNet 
+  3. VGG19 with batch norm
+  4. ResNet50
 
-- ```create_combinedata.py```: use this to combine data from two datasets [CoronaHack](https://www.kaggle.com/praveengovi/coronahack-chest-xraydataset), [Radiology Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
-
-How to use ```create_combinedata.py```:
-  1. download data from 2 websites above and extract them
-  2. make sure folder is structured as below (NOT in compressed form)!!!
-  3. after running ```create_combinedata.py``` in terminal or other ways you will have ```Combined_data``` folder with 4 folders inside COVID, Lung_Opacity, Normal, Viral Pneumonia
-  4. (optional) you can delete COVID-19_Radiography_Dataset and Coronahack-Chest-XRay-Dataset (only images with no label are left in there)
-
-```
-finalProjectfolder
-+-- create_combinedata.py
-+-- COVID-19_Radiography_Dataset
-|   +-- COVID
-|   +-- Lung_Opacity
-|   +-- Normal
-|   +-- Viral Pneumonia
-+-- Coronahack-Chest-XRay-Dataset
-|   +-- test
-|   +-- train
-|   +-- Chest_xray_Corona_dataset_Summary
-|   +-- Chest_xray_Corona_Metadata
-
-
-```
+- helper_functions: dataset, evaluation, train, plotting are written by Professor [Sebastian Raschka](https://github.com/rasbt/stat453-deep-learning-ss21/tree/main/L13/code)
+- helper_GradCAM: code borrowed from Kaggle Notebook by [Debarshi Chanda](https://www.kaggle.com/debarshichanda/gradcam-visualize-your-cnn) 
