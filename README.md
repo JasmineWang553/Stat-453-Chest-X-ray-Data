@@ -16,7 +16,7 @@
 | :-----: |:--------:| :-----:| 
 | AlexNet |  97.87 % |  93.86 %  |
 | VGG19 with batch norm | 98.12 % | 94.33 % | 
-| ResNet 50 |  98.59 % |  95.46 % | 
+| **ResNet 50** |  **98.59 %** |  **95.46 %** | 
 | Logistic Regression | 60.84 %  | 62.24 % |
 
 (2) Multi-class: Precision, Recall, F1 score
