@@ -2,7 +2,7 @@
 
 ## COVID and Lung Disease Detection from Xray images
 - **Intro**: Failure to detect lung disorders or have delayed diagnosis brings devastating results for the patient. Due to the quick spread of COVID-19, many patients were unable to access required treatments in time. Therefore, in order to address these issues, we are motivated to develop deep learning models that can quickly and accurately classify lung diseases and address them with the corresponding treatments in a timely matter.
-- **Goal**: Train models on detecting Covid-19, Viral Pneumonia, heathy lungs and Lung Opacity from X-ray images using transfer learning on Convolutional Neural Networks (CNN): DenseNet, ResNet, AlexNet, and a benchmark model with Logistic Regression.
+- **Goal**: Train models on detecting Covid-19, Viral Pneumonia, heathy lungs and Lung Opacity from X-ray images using transfer learning on Convolutional Neural Networks (CNN): DenseNet, ResNet, AlexNet, and a benchmark model with Logistic Regression. Find the best model with lowest misclassification rate for certainly contagious disease COVID and Viral Pneumonia, and highest test set accuracy.
 - **Tech used**: Pytorch, pandas, numpy, opencv, matplotlib<br>
 
 ## Dataset
