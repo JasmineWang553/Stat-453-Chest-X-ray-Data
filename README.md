@@ -23,7 +23,7 @@ Grad-CAM visualization on CNN models
 | Logistic Regression | 60.84 %  | 62.24 % |
 
 (3) Multi-class: Precision, Recall, F1 score
-| Class label \ Model Name | Logistic Regression | AlexNet | VGG19 with batch norm | Resnet50 | 
+| Class label \ Model Name | Logistic Regression | AlexNet | VGG19_bn | Resnet50 | 
 | :-----: |:--------:| :-----:| :-----:|:-----:|
 | COVID | 25.86 / 28.75 / 27.23  | 96.55 / 94.65 / 95.59  | 97.7 / 94.44 / 96.05 | 98.28 / 97.71 / 97.99 | 
 | Lung Opacity | 53.85 / 70.59/ 61.09 | 88.78 / 94.22 / 91.42 | 90.38 / 94.31 / 92.31 | 90.71 / 96.42 / 93.48 | 
