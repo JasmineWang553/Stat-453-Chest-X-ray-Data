@@ -1,6 +1,6 @@
 # Stat-453-Chest-X-ray-Data
 
-### COVID and Lung Disease Detection from Xray images
+## COVID and Lung Disease Detection from Xray images
 - **Intro**: Failure to detect lung disorders or have delayed diagnosis brings devastating results for the patient. Due to the quick spread of COVID-19, many patients were unable to access required treatments in time. Therefore, in order to address these issues, we are motivated to develop deep learning models that can quickly and accurately classify lung diseases and address them with the corresponding treatments in a timely matter.
 - **Goal**: Train models on detecting Covid-19, Viral Pneumonia, heathy lungs and Lung Opacity from X-ray images using transfer learning on Convolutional Neural Networks (CNN): DenseNet, ResNet, AlexNet, and a benchmark model with Logistic Regression.
 - **Tech used**: Pytorch, pandas, numpy, opencv<br>
@@ -28,6 +28,13 @@
 | Viral Pneumonia | 0.0 / NA / NA  | 96.97 / 95.52 / 96.24  | 96.21 / 96.95 / 96.58 | 95.45 / 96.92 / 96.18 | 
 
 (3) 
+Grad-CAM visualization on CNN models
+
+|            Model             |                    ```Original COVID```                    |                     ```AlexNet```                     |                     ```VGG19_bn```                     |        ```ResNet50```   |           
+| :--------------------------: | :---------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: | :---------------------------------------------------: |
+|            Layer             |                     ```None```                      |                   ```Layer 12```                    |                     ```Layer 51```                     |   ```Layer 4.2```                      |
+| Grad-CAM | ![](gradcam_images/COVID-121.png) | ![](gradcam_images/cam_COVID-121_Alexnet_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_VGG19_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_ResNet50_oldnorm.jpg) |
+
 ## Files
 - jupyter notebooks:
   1. Logistic Regression 
