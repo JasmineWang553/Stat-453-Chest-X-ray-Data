@@ -10,6 +10,24 @@
 - M.E.H. Chowdhury, T. Rahman, A. Khandakar, R. Mazhar, M.A. Kadir, Z.B. Mahbub, K.R. Islam, M.S. Khan, A. Iqbal, N. Al-Emadi, M.B.I. Reaz, M. T. Islam, “Can AI help in screening Viral and COVID-19 pneumonia?” IEEE Access, Vol. 8, 2020, pp. 132665 - 132676. [Paper link](https://ieeexplore.ieee.org/document/9144185)
 - Rahman, T., Khandakar, A., Qiblawey, Y., Tahir, A., Kiranyaz, S., Kashem, S.B.A., Islam, M.T., Maadeed, S.A., Zughaier, S.M., Khan, M.S. and Chowdhury, M.E., 2020. Exploring the Effect of Image Enhancement Techniques on COVID-19 Detection using Chest X-ray Images. [Paper Link](https://www.sciencedirect.com/science/article/pii/S001048252100113X?via%3Dihub)
 
+## Results
+(1) Train, Test Accuracy
+| Model Name \ Evaluation | Train Acc | Test Acc |
+| :-----: |:--------:| :-----:| 
+| AlexNet |  97.87 % |  93.86%  |
+| VGG19 with batch norm | 98.12% | 94.33% | 
+| ResNet 50 |  98.59% |  95.46% | 
+| Logistic Regression | 60.84%  | 62.24% |
+
+(2) Multi-class: Precision, Recall, F1 score
+| Class label \ Model Name | Logistic Regression | AlexNet | VGG19 with batch norm | Resnet50 | 
+| :-----: |:--------:| :-----:| :-----:|
+| COVID | 25.86 / 28.75 / 27.23  | 96.55 / 94.65/ 95.59  | 97.7 / 94.44 / 96.05 | 98.28 / 97.71 / 97.99 | 
+| Lung Opacity | 53.85 / 70.59/ 61.09 | 88.78 / 94.22 / 91.42 | 90.38 / 94.31 / 92.31 | 90.71 / 96.42 / 93.48 | 
+| Normal | 88.04 / 67.14 / 76.19  | 95.65 / 93.17 / 94.39  | 95.36 / 93.96 /94.65 | 97.43 / 93.99 / 95.68 | 
+| Viral Pneumonia | 0.0 / NA / NA  | 96.97 / 95.52 / 96.24  | 96.21 / 96.95 / 96.58 | 95.45 / 96.92 / 96.18 | 
+
+(3) 
 ## Files
 - jupyter notebooks:
   1. Logistic Regression 
