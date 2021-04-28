@@ -109,9 +109,9 @@ def show_examples(model, data_loader, unnormalizer=None, class_dict=None):
             ax.imshow(nhwc_img[idx])
             if class_dict is not None:
                 ax.set_title(f'P: {class_dict[predictions[idx].item()]}\nT: {class_dict[targets[idx].item()]}')
-                
             else:
                 ax.set_title(f'P: {predictions[idx]} \nT: {targets[idx]}')
+                
             ax.axison = False
     plt.tight_layout()
     plt.show()

@@ -12,7 +12,7 @@ from torch.utils.data import (
     DataLoader,
     Subset
 )
-from customDataset import LungXrayDataset
+
 
 # other
 import matplotlib.pyplot as plt
@@ -30,11 +30,7 @@ from tqdm import tqdm
 warnings.filterwarnings("ignore")
 
 # Extract  pretrained activations
-#######################################################################
-# This following code was borrowed from https://www.kaggle.com/debarshichanda/gradcam-visualize-your-cnn
-# author: Debarshi Chanda
 
-#######################################################################
 
 class FeatureExtractor():
     """ Class for extracting activations and
@@ -171,11 +167,12 @@ def deprocess_image(img):
 
 
 def store_gradcam_image(model, feature_module, target_layer_names, model_name, label, i):
-    if not os.path.exists('gradcam_images'):
-        os.makedirs('gradcam_images')
-        
+    # if not os.path.exists('gradcam_images'):
+    #     os.makedirs('gradcam_images')
+    dataset_path = './datasets/Covid_Radiography' 
+
     img_path = os.path.join(
-        f'.\\COVID-19_Radiography_Dataset\\{label}', f'{label}-{i}.png')
+        f'./datasets/Covid_Radiography/{label}', f'{label}-{i}.png')
     img = cv2.imread(img_path, 1)
     img = np.float32(img) / 255
     img = img.astype('float32')
@@ -194,15 +191,15 @@ def store_gradcam_image(model, feature_module, target_layer_names, model_name, l
 
     grayscale_cam = cv2.resize(grayscale_cam, (img.shape[1], img.shape[0]))
     cam = show_cam_on_image(img, grayscale_cam)
-    cv2.imwrite(f".\\gradcam_images\\cam_{label}-{i}_{model_name}.jpg", cam)
-    
+    cv2.imwrite(f"./grad_cam_images/cam_{label}-{i}_{model_name}.jpg", cam)    
+
     def display(model_name, label, i):
         fig, ax = plt.subplots(1, 2, figsize=(8, 8))
         img_path = os.path.join(
-            f'.\\COVID-19_Radiography_Dataset\\{label}', f'{label}-{i}.png')
+            f'./datasets/Covid_Radiography/{label}', f'{label}-{i}.png')
         img = cv2.imread(img_path)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        cam = cv2.imread(f".\\gradcam_images\\cam_{label}-{i}_{model_name}.jpg")
+        cam = cv2.imread(f"./grad_cam_images/cam_{label}-{i}_{model_name}.jpg")
         cam = cv2.cvtColor(cam, cv2.COLOR_BGR2RGB)
         ax[0].imshow(img)
         ax[1].imshow(cam)

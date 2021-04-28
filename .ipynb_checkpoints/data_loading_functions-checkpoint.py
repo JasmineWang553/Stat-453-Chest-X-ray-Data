@@ -44,14 +44,10 @@ def train_val_dataset(dataset):
     return train_idx, test_idx, val_idx
 
 
-def split_train_test_loaders(dataset_path='.\\COVID-19_Radiography_Dataset', batch_size=64):
-    np.random.seed(1)
-
-#     mean = (0.485, 0.456, 0.406)
-#     std = (0.229, 0.224, 0.2255)
+def split_train_test_loaders(dataset_path='.\\Combined_data', batch_size=64):
     mean = [0.4363, 0.4328, 0.3291]
     std = [0.2129, 0.2075, 0.2038]
-    
+
     train_transforms = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.RandomHorizontalFlip(),
@@ -89,44 +85,7 @@ def convert_lab(lab):
     return [label_dc[int(i)] for i in list(lab)]
 
 
-def show_img(dataset_path='.\\COVID-19_Radiography_Dataset', train=False):
-#     mean = (0.485, 0.456, 0.406)
-#     std = (0.229, 0.224, 0.2255)
-    mean = [0.4363, 0.4328, 0.3291]
-    std = [0.2129, 0.2075, 0.2038]
-    
-    if train:
-        train_transforms = transforms.Compose([
-            transforms.Resize((224, 224)),
-            transforms.RandomHorizontalFlip(),
-            transforms.RandomRotation(10),
-            transforms.ToTensor(),
-            transforms.Normalize(torch.Tensor(mean), torch.Tensor(std))
-        ])
-        data = ImageFolder(dataset_path, transform=train_transforms)
-    else:
-        data_transform = transforms.Compose([
-            transforms.Resize((224, 224)),
-            transforms.ToTensor(),
-        ])
-        data = ImageFolder(dataset_path, transform=data_transform)
-
-    loader = DataLoader(data, 4, shuffle=True)
-
-    batch = next(iter(loader))
-    img, lab = batch
-
-    labels = convert_lab(lab)
-    fig, axes = plt.subplots(1, 4, figsize=(20, 20))
-
-    for ind, image in enumerate(img):
-        axes[ind].imshow(image.permute(1, 2, 0))
-        axes[ind].set_title(labels[ind])
-
-    # fig.savefig('display_images.jpg')
-
-
-def show_img_orig(data):
+def show_img(data):
     loader = DataLoader(data, 4, shuffle=True)
 
     batch = next(iter(loader))

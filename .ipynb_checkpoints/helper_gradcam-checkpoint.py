@@ -30,11 +30,7 @@ from tqdm import tqdm
 warnings.filterwarnings("ignore")
 
 # Extract  pretrained activations
-#######################################################################
-# This following code was borrowed from https://www.kaggle.com/debarshichanda/gradcam-visualize-your-cnn
-# author: Debarshi Chanda
 
-#######################################################################
 
 class FeatureExtractor():
     """ Class for extracting activations and

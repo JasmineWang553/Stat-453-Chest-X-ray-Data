@@ -76,19 +76,3 @@ def compute_confusion_matrix(model, data_loader, device):
         lst.append(z.count(combi))
     mat = np.asarray(lst)[:, None].reshape(n_labels, n_labels)
     return mat
-
-def cal_pre_rec(mat):
-    labels = ['COVID', 'Lung_Opacity', 'Normal', 'Viral Pneumonia']
-    total_predicted = mat.sum(axis = 1)
-    total_gold = mat.sum(axis = 0)
-    
-    for label in range(4):
-        prec = mat[label, label] / total_predicted[label] * 100
-        rec = mat[label, label] / total_gold[label] * 100
-        f1 = 2 * prec * rec / (prec + rec) 
-       
-
-        print(labels[label], end = ' ')
-        print(f'=> Precision: {round(prec, 2)}%, Recall: {round(rec, 2)}%, F1: {round(f1, 2)}%')
-        print('-'*17)
-        
