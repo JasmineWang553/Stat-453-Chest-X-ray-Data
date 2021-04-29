@@ -11,7 +11,7 @@ Grad-CAM visualization on CNN models
 
 |            Model             |                    ```Original COVID```                    |                     ```AlexNet```                     |                     ```VGG19_bn```                     |        ```ResNet50```   |           
 | :--------------------------: | :---------------------------------------------------: | :-------------------------------------------------: | :----------------------------------------------------: | :---------------------------------------------------: |
-|            Layer             |                     ```None```                      |                   ```Layer 12```                    |                     ```Layer 51```                     |   ```Layer 4.2```                      |
+|            Layer             |                     ```None```                      |                   ```Layer 5```                    |                     ```Layer 16```                     |   ```Layer 49```                      |
 | Grad-CAM | ![](gradcam_images/COVID-121.png) | ![](gradcam_images/cam_COVID-121_Alexnet_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_VGG19_oldnorm.jpg) | ![](gradcam_images/cam_COVID-121_ResNet50_oldnorm.jpg) |
 
 (2) Train, Test Accuracy
